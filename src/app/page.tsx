@@ -1,7 +1,3 @@
 export default function Home() {
-  return (
-    <section className="">
-      ff
-    </section>
-  )
+  return <section className="">ff</section>
 }

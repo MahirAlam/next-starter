@@ -1,5 +1,6 @@
 {
   "root": true,
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2020,
     "sourceType": "module",
@@ -7,10 +8,12 @@
       "jsx": true
     }
   },
+
   "env": {
     "node": true,
     "es6": true
   },
+
   "settings": {
     "react": {
       "version": "detect"
@@ -22,6 +25,10 @@
     }
   },
 
+  "globals": {
+    "React": true
+  },
+
   "extends": [
     "next/core-web-vitals",
     "plugin:@typescript-eslint/recommended",
@@ -30,14 +37,19 @@
     "plugin:sonarjs/recommended",
     "plugin:security/recommended",
     "plugin:react-hooks/recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
     "airbnb",
+    "airbnb-typescript",
     "prettier"
   ],
+
   "plugins": [
     "@typescript-eslint/eslint-plugin",
     "simple-import-sort",
     "import"
   ],
+
   "rules": {
     "@typescript-eslint/no-unused-vars": "warn",
     "react/jsx-filename-extension": [
@@ -46,6 +58,8 @@
         "extensions": [".ts", ".tsx", ".js", ".jsx"]
       }
     ],
+    "react/jsx-uses-react": "error",
+    "react/jsx-uses-vars": "error",
     "react/jsx-props-no-spreading": "off",
     "react/require-default-props": "off",
     "react/no-unused-prop-types": "warn",
